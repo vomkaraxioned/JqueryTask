@@ -100,13 +100,25 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 100%; 
   margin: 0 auto;
 }
 /*=================================
   Header styling starts here
 =================================*/
+.boxBoundary{
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.box{
+  width: 100px;
+  height: 100px;
+  background-color: #00ffff;
+}
 
 
 
