@@ -117,7 +117,12 @@ li {
 .box{
   width: 100px;
   height: 100px;
+  display: flex;
   background-color: #00ffff;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+
 }
 
 
