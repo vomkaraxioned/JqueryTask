@@ -2,36 +2,27 @@
 
 */
 let box = $(".box");
-
+let colors = ["#ff0","#0ff","#f00","#800","#e06666","#f6b26b","#ff8c00"];
+let index  = 0;
 function animation () {
-    box.animate({ left:'90%'}, 2000, ()=> {
-        box.css( "background-color", "#ff0");
-    });
-    box.animate({ left:'45%'}, 2000, ()=> {
-        box.css( "background-color", "#0ff" );
-    });
-    box.animate({ left: 0 }, 2000, ()=> {
-        box.css("background-color", "#f00");
-    });
-    box.animate({ left: '45%' }, 2000, ()=> {
-        box.css( "background-color", "#0ff" );
-    });
-    box.animate({ top:0 }, 2000, ()=> {
-        box.css("background-color", "#f0f");
-    });
-    box.animate({ top:'40%' }, 2000, ()=> {
-        box.css("background-color", "#0ff");
-    });
+    box.animate({ left:'90%'}, 2000);
+    box.animate({ top:0 }, 2000);
+    box.animate({ left: 0 }, 2000);
     box.animate({top:'100%'}, 2000, ()=> {
-        box.css("background-color", "#800");
-    });
-    box.animate({top:'40%'}, 2000, ()=> {
-        box.css("background-color", "#0ff");
         animation();
     });
 }
 
+function changeColor() {
+    if(index >= colors.length){
+        index = 0;
+    }
+    box.css("backgroundColor",colors[index]);
+    index ++;
+}
+
 box.click(()=>{
+    setInterval(changeColor,500);
     animation();
 });
 
